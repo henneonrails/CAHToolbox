@@ -1,6 +1,5 @@
 //
 //  CAHToolbox.swift
-//  Seewetter2
 //
 //  Created by Holger Haenisch on 04.10.15.
 //  Copyright © 2015 Holger Hänisch. All rights reserved.
@@ -61,7 +60,7 @@ public func showSimpleAlertWithTitle(title: String!, message: String, viewContro
 // MARK - sharing menu helper
 /**
 *Sharing Menu Helper*
-simple approach to get sharing working
+simple approach to get sharing working. Simply call it from a bar button e.g. 
 
 - parameter sharingText: if you want to share a simple String
 - parameter sharingHTML: if you hava a String with HTML content it will be formatted for iOS
