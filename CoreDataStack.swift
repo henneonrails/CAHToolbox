@@ -104,6 +104,7 @@ class CoreDataStackManager {
         return self.applicationDocumentsDirectory.URLByAppendingPathComponent(mainStoreFileName)
         }()
     
+    /// the managedObjectContext
     lazy var managedObjectContext: NSManagedObjectContext = {
         let moc = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
         
@@ -111,4 +112,13 @@ class CoreDataStackManager {
         
         return moc
         }()
+    
+    /// a concurrencyType managedObjectContext for use in background operations on the database
+    /// eg. cleanup normaly called: privateManagedObjectContext.performBlock
+    lazy var privateManagedObjectContext : NSManagedObjectContext = {
+        let pmoc = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
+        pmoc.persistentStoreCoordinator = self.persistentStoreCoordinator
+        return pmoc
+        }()
+
 }
