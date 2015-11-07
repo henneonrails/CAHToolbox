@@ -94,3 +94,26 @@ public func shareTextImageAndURL(sharingText sharingText: String?,sharingHTML: S
     viewController.presentViewController(activityViewController, animated: true, completion: nil)
     //self.presentViewController(activityViewController, animated: true, completion: nil)
 }
+
+//MARK : UIImage improvements
+
+extension UIImageView {
+    convenience init(URL: NSURL, errorImage: UIImage? = nil) {
+        self.init()
+        self.setImageFromURL(URL)
+    }
+    /// load an image from a url 
+    func setImageFromURL(URL: NSURL, errorImage: UIImage? = nil) {
+        let downloadTask = NSURLSession.sharedSession().dataTaskWithURL(URL) {(data, response, error) in
+            if (error == nil) {
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.image = UIImage(data: data!)
+                })
+            }
+            else {
+                self.image = errorImage
+            }
+        }
+        downloadTask.resume()
+    }
+}
