@@ -95,7 +95,7 @@ public func shareTextImageAndURL(sharingText sharingText: String?,sharingHTML: S
     //self.presentViewController(activityViewController, animated: true, completion: nil)
 }
 
-//MARK : UIImage improvements
+//MARK : UIImageView improvements
 
 extension UIImageView {
     convenience init(URL: NSURL, errorImage: UIImage? = nil) {
