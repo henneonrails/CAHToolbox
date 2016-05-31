@@ -117,3 +117,16 @@ extension UIImageView {
         downloadTask.resume()
     }
 }
+
+extension UIViewController {
+    
+    /// get the right controller seguewaying to 
+    var contentViewController : UIViewController {
+        if let navcon = self as? UINavigationController {
+            return navcon.visibleViewController
+        } else {
+            return self
+        }
+    }
+}
+
