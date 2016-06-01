@@ -1,0 +1,22 @@
+{
+  "name": "CAHToolbox",
+  "version": "0.1.0",
+  "summary": "A short description of CAHToolbox.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/CAHToolbox",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Holger Hänisch": "holger@haenisch.de"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/CAHToolbox.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CAHToolbox/Classes/**/*"
+}

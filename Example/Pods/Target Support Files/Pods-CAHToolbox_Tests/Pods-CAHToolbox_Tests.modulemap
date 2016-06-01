@@ -1,0 +1,6 @@
+framework module Pods_CAHToolbox_Tests {
+  umbrella header "Pods-CAHToolbox_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+use_frameworks!
+target 'CAHToolbox_Tests' do
+  pod 'CAHToolbox', :path => '../'
+  
+  
+end

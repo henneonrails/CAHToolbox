@@ -1,0 +1,6 @@
+framework module CAHToolbox {
+  umbrella header "CAHToolbox-umbrella.h"
+
+  export *
+  module * { export * }
+}
